@@ -52,3 +52,10 @@
   </tbody>
 </table>
 <%= link_to 'Add new movie', new_movie_path, class: 'btn btn-primary' %>
+
+<h1>Search TMDb for a movie</h1>
+<%= form_tag action: 'search_tmdb' do %>
+  <%= label_tag 'search_terms', 'Search Terms' %>
+  <%= text_field_tag 'search_terms' %>
+  <%= submit_tag "Search TMDb" %>
+<% end %>

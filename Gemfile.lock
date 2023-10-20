@@ -85,6 +85,8 @@ GEM
       mime-types (>= 2.0, < 4)
       nokogiri (~> 1.8)
       rails (>= 4.2, < 7)
+    cucumber-rails-training-wheels (1.0.0)
+      cucumber-rails (>= 1.1.1)
     cucumber-tag-expressions (2.0.4)
     cucumber-wire (3.1.0)
       cucumber-core (~> 7.1, >= 7.1.0)
@@ -231,6 +233,7 @@ PLATFORMS
 DEPENDENCIES
   byebug
   cucumber-rails
+  cucumber-rails-training-wheels
   database_cleaner
   jquery-rails
   pg (~> 0.2)

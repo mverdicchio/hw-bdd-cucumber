@@ -20,6 +20,7 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'cucumber-rails', require: false
   gem 'rspec-rails'
+  gem "cucumber-rails-training-wheels", :group => :test
 
   gem 'pry'
   gem 'pry-byebug'
