@@ -8,9 +8,14 @@ class MoviesController < ApplicationController
   end
 
   def search_tmdb
-    # hardwired to simulate failure
-    flash[:warning] = "'#{params[:search_terms]}' was not found in TMDb."
-    redirect_to movies_path
+    @movies = Movie.find_in_tmdb(params[:search_terms])
+    if @movies.nil?
+      flash[:notice] = "'#{params[:search_terms]}' was not found in TMDb."
+      redirect_to movies_path
+    else
+      flash[:notice] = "'#{params[:search_terms]}' was found in TMDb."
+      redirect_to new_movie_path
+    end
   end
 
   def index
